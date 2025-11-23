@@ -123,7 +123,7 @@ export default function Home() {
               
               <h3 className="text-2xl font-serif font-bold mb-3 relative z-10">The Morning Brief</h3>
               <p className="text-slate-300 mb-6 relative z-10 text-sm leading-relaxed">
-                Start your day with the most important stories from Mount Kenya and beyond.
+                Start your day with the most important stories from PKMedia.
               </p>
               
               <div className="relative z-10 space-y-3">

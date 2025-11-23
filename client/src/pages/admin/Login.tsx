@@ -49,7 +49,7 @@ export default function AdminLogin() {
           </CardFooter>
         </form>
         <div className="pb-6 text-center text-xs text-muted-foreground">
-          Mount Kenya News Management System
+          PKMedia Management System
         </div>
       </Card>
     </div>

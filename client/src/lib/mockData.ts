@@ -48,7 +48,7 @@ export const MOCK_ARTICLES: Article[] = [
   {
     id: 4,
     title: "Local Team Qualifies for National Championships",
-    content: "The Mount Kenya United football team has secured a spot in the national championships after a thrilling 2-1 victory over their rivals...",
+    content: "The PKMedia United football team has secured a spot in the national championships after a thrilling 2-1 victory over their rivals...",
     image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&q=80&w=1000",
     category: "Sports",
     author: "Brian Ochieng",

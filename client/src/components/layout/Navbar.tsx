@@ -49,10 +49,10 @@ export default function Navbar() {
         <Link href="/">
           <a className="flex items-center gap-2">
             <div className="bg-primary text-white p-1 rounded-sm">
-              <span className="font-serif font-bold text-xl tracking-tighter">MK</span>
+              <span className="font-serif font-bold text-xl tracking-tighter">PK</span>
             </div>
             <span className="font-serif font-bold text-xl hidden sm:block text-primary">
-              Mount Kenya <span className="text-accent">News</span>
+              PK<span className="text-accent">Media</span>
             </span>
           </a>
         </Link>

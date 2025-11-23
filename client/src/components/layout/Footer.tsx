@@ -11,14 +11,14 @@ export default function Footer() {
           <div className="space-y-4">
              <div className="flex items-center gap-2">
                 <div className="bg-white text-primary p-1 rounded-sm">
-                  <span className="font-serif font-bold text-xl tracking-tighter">MK</span>
+                  <span className="font-serif font-bold text-xl tracking-tighter">PK</span>
                 </div>
                 <span className="font-serif font-bold text-xl text-white">
-                  Mount Kenya <span className="text-red-500">News</span>
+                  PK<span className="text-red-500">Media</span>
                 </span>
             </div>
             <p className="text-sm text-slate-400 max-w-xs">
-              Your trusted source for breaking news, comprehensive analysis, and in-depth reporting from the mountain region and beyond.
+              Your trusted source for breaking news, comprehensive analysis, and in-depth reporting.
             </p>
           </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
               <a href="#" className="hover:text-white transition-colors"><Instagram className="h-5 w-5" /></a>
               <a href="#" className="hover:text-white transition-colors"><Youtube className="h-5 w-5" /></a>
             </div>
-            <p className="text-xs text-slate-500">© 2025 Mount Kenya News. All rights reserved.</p>
+            <p className="text-xs text-slate-500">© 2025 PKMedia. All rights reserved.</p>
           </div>
         </div>
       </div>

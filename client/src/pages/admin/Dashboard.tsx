@@ -61,10 +61,10 @@ export default function AdminDashboard() {
   
   // Mock Users Data
   const [users, setUsers] = useState([
-    { id: 1, name: "Admin User", email: "admin@mknews.com", role: "Admin", status: "Active" },
-    { id: 2, name: "John Editor", email: "john@mknews.com", role: "Editor", status: "Active" },
-    { id: 3, name: "Sarah Writer", email: "sarah@mknews.com", role: "Writer", status: "Inactive" },
-    { id: 4, name: "Mike Intern", email: "mike@mknews.com", role: "Intern", status: "Active" },
+    { id: 1, name: "Admin User", email: "admin@pkmedia.com", role: "Admin", status: "Active" },
+    { id: 2, name: "John Editor", email: "john@pkmedia.com", role: "Editor", status: "Active" },
+    { id: 3, name: "Sarah Writer", email: "sarah@pkmedia.com", role: "Writer", status: "Inactive" },
+    { id: 4, name: "Mike Intern", email: "mike@pkmedia.com", role: "Intern", status: "Active" },
   ]);
 
   // Mock Comments Data
@@ -583,7 +583,7 @@ export default function AdminDashboard() {
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                               <div className="space-y-2">
                                   <Label htmlFor="siteName">Site Name</Label>
-                                  <Input id="siteName" defaultValue="Mount Kenya News" />
+                                  <Input id="siteName" defaultValue="PKMedia" />
                               </div>
                               <div className="space-y-2">
                                   <Label htmlFor="contactEmail">Contact Email</Label>
