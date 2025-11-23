@@ -32,7 +32,7 @@ import {
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MOCK_ARTICLES, MOCK_STATS, CATEGORIES } from "@/lib/mockData";
@@ -365,6 +365,118 @@ export default function AdminDashboard() {
                           </Card>
                       ))}
                   </div>
+              </div>
+          )}
+
+          {/* SETTINGS TAB */}
+          {activeTab === 'settings' && (
+              <div className="space-y-8 max-w-4xl animate-in fade-in duration-500">
+                  
+                  {/* General Settings */}
+                  <Card>
+                      <CardHeader>
+                          <CardTitle>General Settings</CardTitle>
+                          <CardDescription>Manage core site configuration and SEO.</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <div className="space-y-2">
+                                  <Label htmlFor="siteName">Site Name</Label>
+                                  <Input id="siteName" defaultValue="Mount Kenya News" />
+                              </div>
+                              <div className="space-y-2">
+                                  <Label htmlFor="contactEmail">Contact Email</Label>
+                                  <Input id="contactEmail" defaultValue="contact@mountkenyanews.com" />
+                              </div>
+                          </div>
+                          <div className="space-y-2">
+                              <Label htmlFor="description">Site Description (Meta)</Label>
+                              <Textarea id="description" defaultValue="Your trusted source for breaking news, politics, business, and sports from Mount Kenya and beyond." />
+                          </div>
+                      </CardContent>
+                  </Card>
+
+                  {/* Social Media */}
+                  <Card>
+                      <CardHeader>
+                          <CardTitle>Social Media Links</CardTitle>
+                          <CardDescription>Connect your social profiles to the footer.</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                              <div className="space-y-2">
+                                  <Label htmlFor="facebook">Facebook URL</Label>
+                                  <Input id="facebook" placeholder="https://facebook.com/..." />
+                              </div>
+                              <div className="space-y-2">
+                                  <Label htmlFor="twitter">Twitter (X) URL</Label>
+                                  <Input id="twitter" placeholder="https://twitter.com/..." />
+                              </div>
+                              <div className="space-y-2">
+                                  <Label htmlFor="instagram">Instagram URL</Label>
+                                  <Input id="instagram" placeholder="https://instagram.com/..." />
+                              </div>
+                              <div className="space-y-2">
+                                  <Label htmlFor="youtube">YouTube URL</Label>
+                                  <Input id="youtube" placeholder="https://youtube.com/..." />
+                              </div>
+                          </div>
+                      </CardContent>
+                  </Card>
+
+                  {/* Content & Comments */}
+                  <Card>
+                      <CardHeader>
+                          <CardTitle>Content Configuration</CardTitle>
+                          <CardDescription>Control how content is displayed and managed.</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-6">
+                          <div className="flex items-center justify-between">
+                              <div className="space-y-0.5">
+                                  <Label className="text-base">Enable Comments</Label>
+                                  <p className="text-sm text-muted-foreground">Allow users to comment on articles.</p>
+                              </div>
+                              <Switch defaultChecked />
+                          </div>
+                          <div className="flex items-center justify-between">
+                              <div className="space-y-0.5">
+                                  <Label className="text-base">Auto-Moderation</Label>
+                                  <p className="text-sm text-muted-foreground">Automatically hide comments with filtered keywords.</p>
+                              </div>
+                              <Switch defaultChecked />
+                          </div>
+                           <div className="flex items-center justify-between">
+                              <div className="space-y-0.5">
+                                  <Label className="text-base">Breaking News Ticker</Label>
+                                  <p className="text-sm text-muted-foreground">Show the scrolling ticker on the homepage.</p>
+                              </div>
+                              <Switch defaultChecked />
+                          </div>
+                      </CardContent>
+                  </Card>
+
+                  {/* Admin Profile */}
+                  <Card>
+                      <CardHeader>
+                          <CardTitle>Admin Profile</CardTitle>
+                          <CardDescription>Update your login credentials.</CardDescription>
+                      </CardHeader>
+                      <CardContent className="space-y-4">
+                          <div className="space-y-2">
+                              <Label htmlFor="new-password">New Password</Label>
+                              <Input id="new-password" type="password" />
+                          </div>
+                          <div className="space-y-2">
+                              <Label htmlFor="confirm-password">Confirm New Password</Label>
+                              <Input id="confirm-password" type="password" />
+                          </div>
+                          <Button 
+                              onClick={() => toast({ title: "Settings Saved", description: "All changes have been successfully applied." })}
+                          >
+                              Save All Changes
+                          </Button>
+                      </CardContent>
+                  </Card>
               </div>
           )}
 
