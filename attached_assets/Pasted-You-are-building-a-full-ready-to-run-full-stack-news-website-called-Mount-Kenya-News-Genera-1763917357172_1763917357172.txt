@@ -1,0 +1,161 @@
+You are building a full, ready-to-run full-stack news website called **Mount Kenya News**.
+
+Generate the project in clean steps so that every part of the code is complete. Use short, efficient blocks for each file.
+
+===========================
+PROJECT REQUIREMENTS
+===========================
+
+TECH STACK:
+- Frontend: React + Tailwind CSS
+- Backend: Node.js + Express
+- Database: SQLite
+- Styling: Blue, White and Red colors with slight gradients and soft 3D shadows.
+
+FOLDER STRUCTURE:
+- /frontend
+- /backend
+- /backend/routes
+- /backend/models
+- /backend/controllers
+- /database
+- /uploads (for article images)
+
+===========================
+PUBLIC FEATURES (NO LOGIN)
+===========================
+
+The **landing page MUST display all articles** to any visitor without login.
+
+Public pages required:
+1. Landing page:
+   - Shows all news articles from the database
+   - Featured top stories section
+   - Latest news feed
+   - Category filter (All, Politics, Business, Sports, Entertainment, Tech, Counties)
+   - Breaking news ticker
+   - Article cards (image, title, short description, category, date)
+
+2. Article page:
+   - Full article content
+   - Image
+   - Category
+   - Timestamp
+   - Share buttons
+
+All public routes require NO LOGIN.
+
+===========================
+ADMIN FEATURES (LOGIN REQUIRED)
+===========================
+
+After login, admin can access:
+- Admin dashboard
+- Add article
+- Edit article
+- Delete article
+- Manage categories
+- Upload images
+- View stats (# of articles, categories, recent posts)
+
+Authentication:
+- Username + Password
+- Session or JWT
+- Protect all admin routes
+
+===========================
+DATABASE STRUCTURE (SQLite)
+===========================
+
+Create these tables:
+
+users(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE,
+  password TEXT
+)
+
+articles(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT,
+  content TEXT,
+  image TEXT,
+  category TEXT,
+  author TEXT,
+  timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+
+categories(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT
+)
+
+Include some demo articles so the homepage displays content immediately.
+
+===========================
+BACKEND REQUIREMENTS
+===========================
+
+Create a complete Express + SQLite backend with:
+
+ROUTES:
+- GET /articles
+- GET /articles/:id
+- POST /articles (admin only)
+- PUT /articles/:id (admin only)
+- DELETE /articles/:id (admin only)
+- GET /categories
+- POST /categories (admin only)
+- Auth routes: /login, /logout
+
+FILES TO GENERATE:
+- server.js
+- db.js (SQLite connection)
+- controllers for articles, auth, categories
+- routes for articles, auth, categories
+- middleware for authentication
+
+===========================
+FRONTEND REQUIREMENTS
+===========================
+
+React components required:
+- HomePage
+- ArticlePage
+- Navbar
+- BreakingNewsTicker
+- CategoryFilter
+- ArticleCard
+- Footer
+- AdminLogin
+- AdminDashboard
+- AddArticleForm
+- EditArticleForm
+- ManageCategories
+- StatsCards
+
+UI Guidelines:
+- Use blue, white, and red color palette
+- Slight gradients
+- Smooth hover animations
+- Soft 3D shadows on cards
+- Clean modern news layout (KBC / BBC style)
+
+===========================
+FINAL OUTPUT FORMAT
+===========================
+
+Generate everything in **clear sequential order**:
+
+1. Create the final folder structure.
+2. Generate all backend files completely with code.
+3. Generate all frontend files completely with code.
+4. Provide database initialization script.
+5. Provide commands for running both frontend and backend.
+6. Provide instructions for connecting frontend → backend API.
+
+Make sure all files contain COMPLETE working code.
+
+Do not skip any part.
+
+Generate EVERYTHING in this single answer.
